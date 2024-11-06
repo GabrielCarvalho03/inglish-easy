@@ -88,7 +88,7 @@ export const Payment = () => {
               <Button
                 title="Ir para pagamento"
                 type="button"
-                className="shadow-Button h-12 md:h-10 hover:scale-105 transition-transform duration-100 text-color-secondary"
+                className="shadow-Button h-10  md:h-10 hover:scale-105 transition-transform duration-100 text-color-secondary"
               />
             </div>
           </section>
