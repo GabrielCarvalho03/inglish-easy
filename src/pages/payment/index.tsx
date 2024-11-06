@@ -12,26 +12,18 @@ import {
 import CreditCardIcon from "@/assets/icons/credit-card-icon";
 import PixIcon from "@/assets/icons/pix-icon";
 import { Button } from "@/components/button";
+import { Menu } from "@/components/menu";
 
 export const Payment = () => {
   return (
     <div>
-      <section className="py-10 w-full flex justify-center">
-        <div className=" w-11/12  md:w-9/12  xl:w-5/12 h-10 shadow-menu rounded-md px-10 py-6 flex justify-between items-center">
-          <div>
-            <h1 className=" text-xs sm:text-base">
-              Entrar na comunidade do whatsaap
-            </h1>
-          </div>
-
-          <div className="w-4/12 flex justify-end ">
-            <Button
-              className="bg-gradient-to-r from-color-primary to-color-secondary text-white"
-              title="Entrar"
-            />
-          </div>
+      <Menu title="Entrar">
+        <div>
+          <h1 className=" text-xs sm:text-base">
+            Entrar na comunidade do whatsaap
+          </h1>
         </div>
-      </section>
+      </Menu>
 
       <section className="  relative w-full md:flex  items-center ">
         <div className="w-full">

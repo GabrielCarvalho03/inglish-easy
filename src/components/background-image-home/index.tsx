@@ -5,7 +5,7 @@ type BackgroundImageProps = {
   children?: React.ReactNode;
 };
 
-export const BackgroundImage = ({
+export const BackgroundImageHome = ({
   bgImage,
   children,
 }: BackgroundImageProps) => {
@@ -27,15 +27,10 @@ export const BackgroundImage = ({
   return (
     <div
       style={{
-        width:
-          window.innerWidth >= 1405
-            ? "60%"
-            : window.innerWidth >= 1075
-            ? imageDimensions.width
-            : "100%",
+        width: imageDimensions.width,
         height: imageDimensions.height,
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "100%",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat", // Evita a repetição da imagem
         backgroundPosition: "center",
         position: "relative",

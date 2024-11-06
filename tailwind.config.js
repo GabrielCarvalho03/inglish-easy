@@ -14,11 +14,13 @@ export default {
       },
       fontFamily: {
         wix: "Wix Madefor Display, sans-serif",
+        alexandria: "Alexandria, serif",
       },
       colors: {
         color: {
           primary: "#0084FF",
           secondary: "#5DA7B1",
+          blackLinght: "#3B3737",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
