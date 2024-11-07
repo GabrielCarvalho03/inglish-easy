@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 type BackgroundImageProps = {
   bgImage: string;
   children?: React.ReactNode;
+  
 };
 
 export const BackgroundImageHome = ({

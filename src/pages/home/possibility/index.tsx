@@ -1,36 +1,41 @@
-import BulbIcon from "@/assets/icons/bulb";
-import ImersionIcon from "@/assets/icons/imersion-icon";
-import { BlockInfo } from "@/components/BlockInfo";
+import { BackgroundImageHome } from "@/components/background-image-home"
+import invertideBackground from "@/assets/img/invertide-background.png";
+import Analitic from "@/assets/img/analitic.png";
 import { ColorBar } from "@/components/color-bar";
 
+
 export const Possibility = () => {
-  return (
-    <main className="w-full px-10  flex flex-col lg:flex-row gap-16 pt-5 items-center lg:justify-around ">
-      <div className="w-11/12 md:w-[467px]">
-        <ColorBar color="primary" />
-        <h1 className="text-2xl font-extrabold">
-          Por que aprender com lingagem com intelingencia artifical ?
-        </h1>
-        <p className="mt-2 lg:mt-0">
-          Aprender com IA acelera o progresso, adaptando o conteúdo ao ritmo e
-          necessidades de cada aluno, tornando o aprendizado mais eficiente e
-          motivador.
-        </p>
-      </div>
-      <div className="flex flex-col sm:flex-row gap-14">
-        <BlockInfo
-          color="primary"
-          icon={<BulbIcon />}
-          title="Solução criativa"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <BlockInfo
-          color="secondary"
-          icon={<ImersionIcon />}
-          title="Imersão "
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-      </div>
-    </main>
-  );
-};
+
+    return(
+        <main className="w-full flex flex-col-reverse lg:flex-row justify-between  lg:pl-40  ">
+      
+    
+  
+        <section className="lg:-ml-28  mb-10  md:mb-0 flex justify-center  items-center ml-10 mt-10  ">
+            <div className="flex flex-col ">
+                <ColorBar
+                color="primary"
+                />
+                <h1 className="font-extrabold text-2xl ">È possivel aprender com uma IA ?</h1>
+                <div className=" ">
+                <p className="text-gray-400 w-8/12">Com certeza! Inteligência Artificial ajusta-se ao seu ritmo, identifica suas necessidades e torna o aprendizado mais eficaz e envolvente.</p>
+
+                </div>
+            </div>
+  
+          </section>
+
+  <div className="w-full flex justify-end ">
+    
+  <BackgroundImageHome bgImage={invertideBackground}>
+          <div className="w-full  flex ">
+            <img
+            width={window.innerWidth <= 495 ?'98%' :'90%'}
+            className=" absolute transform translate-y-96  translate-x-0 md:translate-y-60 md:-translate-x-16 "
+            src={Analitic} alt="" />
+          </div>
+        </BackgroundImageHome>
+  </div>
+      </main>
+    )
+}
