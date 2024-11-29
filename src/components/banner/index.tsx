@@ -1,5 +1,4 @@
 import BannerImage from "@/assets/img/banner-image.png";
-import { Button } from "../button";
 
 export const Banner = () => {
   return (
