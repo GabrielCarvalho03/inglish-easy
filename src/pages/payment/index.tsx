@@ -13,8 +13,30 @@ import CreditCardIcon from "@/assets/icons/credit-card-icon";
 import PixIcon from "@/assets/icons/pix-icon";
 import { Button } from "@/components/button";
 import { Menu } from "@/components/menu";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  DateFormPayment,
+  schemaPayment,
+} from "@/hooks/usePayment/paymentSchema";
+import { ErroMessage } from "@/components/erroMessage";
 
 export const Payment = () => {
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<DateFormPayment>({
+    mode: "all",
+    reValidateMode: "onChange",
+    resolver: zodResolver(schemaPayment),
+  });
+
+  const AuthorizePayment = async (data: DateFormPayment) => {
+    console.log(data);
+  };
+
   return (
     <div>
       <Menu title="Entrar">
@@ -42,20 +64,41 @@ export const Payment = () => {
           </BackgroundImage>
         </div>
 
-        <form className="w-full mb-10 md:mt-20">
-          <section className="flex flex-col justify-center items-center">
+        <section className="w-full mb-10 md:mt-20">
+          <form
+            onSubmit={handleSubmit(AuthorizePayment)}
+            className="flex flex-col justify-center items-center"
+          >
             <div className="w-8/12 flex flex-col gap-5 ">
-              <InputCustom className="rounded-lg" placeholder="Nome" />
               <InputCustom
+                {...register("name")}
+                className="rounded-lg"
+                placeholder="Nome"
+              />
+              <ErroMessage erro={errors.name?.message ?? ""} />
+
+              <InputCustom
+                {...register("email")}
                 className="rounded-lg"
                 type="email"
                 placeholder="Email"
               />
+
+              <ErroMessage erro={errors.email?.message ?? ""} />
+
               <InputCustom
+                mask="(99) 99999-9999"
+                {...register("phone")}
                 className="rounded-lg"
                 placeholder="Telefone(com DDD)"
               />
-              <Select>
+
+              <ErroMessage erro={errors.phone?.message ?? ""} />
+
+              <Select
+                defaultValue="Cartão de crédito"
+                onValueChange={(value) => setValue("paymentMethod", value)}
+              >
                 <SelectTrigger className=" font-extralight w-full border-gray-300 text-gray-400 h-10 font-wix ">
                   <SelectValue placeholder="Selecione uma forma de pagamento" />
                 </SelectTrigger>
@@ -79,12 +122,12 @@ export const Payment = () => {
             <div className="w-8/12  xl:w-3/12 flex flex-col gap-5 mt-10">
               <Button
                 title="Ir para pagamento"
-                type="button"
+                type="submit"
                 className="shadow-Button h-10  md:h-10 hover:scale-105 transition-transform duration-100 text-color-secondary"
               />
             </div>
-          </section>
-        </form>
+          </form>
+        </section>
       </section>
     </div>
   );
