@@ -5,6 +5,7 @@ export const schemaPayment = z.object({
   email: z.string().email("Email inválido"),
   phone: z.string().min(11, "Telefone inválido"),
   paymentMethod: z.string().default("Cartão de crédito"),
+  price: z.string().default(""),
 });
 
 export type DateFormPayment = z.infer<typeof schemaPayment>;

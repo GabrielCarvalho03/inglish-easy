@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Doubt } from "./Doubt";
 import { Hero } from "./hero";
 import { Plans } from "./Plans";

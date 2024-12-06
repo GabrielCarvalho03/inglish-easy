@@ -33,7 +33,7 @@ export const Doubt = () => {
                 Quais são as formas de pagamento?
               </AccordionTrigger>
               <AccordionContent>
-                Você pode pagar com cartão de crédito ou boleto bancário.
+                Você pode pagar com cartão de crédito, boleto bancário ou pix.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
