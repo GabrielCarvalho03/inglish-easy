@@ -3,8 +3,10 @@ import BackgroundPayment from "@/assets/img/backgound-payment.png";
 import ManPlanIcon from "@/assets/img/man-plan.png";
 import { Button } from "@/components/button";
 import { useNavigate } from "react-router-dom";
+import { forwardRef } from "react";
 
-export const Plans = () => {
+  
+export const Plans = forwardRef<HTMLDivElement, {}>((_, ref) => {
   const navigate = useNavigate();
 
   return (
@@ -150,4 +152,5 @@ export const Plans = () => {
 
     </main>
   );
-};
+});
+Plans.displayName = "Plans"; 
