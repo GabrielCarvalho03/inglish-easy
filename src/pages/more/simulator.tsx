@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const AudioSimulation = ({ userAudioFile, iaAudioFile }: any) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  const [messages, setMessages] = useState([
+  const messages = [
     { sender: 'user', audio: userAudioFile },
     { sender: 'ia', audio: iaAudioFile },
     { sender: 'user', audio: userAudioFile },
     { sender: 'ia', audio: iaAudioFile }
-  ]);
+  ];
 
   const [audio] = useState(new Audio(messages[currentMessageIndex]?.audio));
 

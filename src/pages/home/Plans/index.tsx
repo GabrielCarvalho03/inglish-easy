@@ -1,19 +1,17 @@
 import { BackgroundImageHome } from "@/components/background-image-home";
 import { Button } from "@/components/button";
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import BackgroundPayment from "@/assets/img/backgound-payment.png";
 
 import ManPlanIcon from "@/assets/img/man-plan.png";
 
-export const Plans = forwardRef<HTMLDivElement, {}>((_, ref) => {
-  const [selectedPrice, setSelectedPrice] = useState<string | number>("");
+export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
 
   const navigate = useNavigate();
 
   const handlePlanSelect = (price: string | number) => {
-    setSelectedPrice(price);
     navigate("/payment", { state: { selectedPrice: price } });
   };
 
