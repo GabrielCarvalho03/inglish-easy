@@ -28,8 +28,7 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
         </div>
       </BackgroundImageHome>
 
-      <section className="md:-ml-28 mb-10 mt-10 md:mb-0 flex justify-center items-center ">
-
+      <section className="flex flex-row space-x-5 mt-[170px]">
         <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative ">
           <h1 className="text-color-primary font-extrabold text-2xl">
             R$ 4,99<span className="font-light text-sm">/Dia</span>
@@ -37,7 +36,6 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
           <span className="text-color-secondary font-extrabold text-3xl">
             Trial Plan
           </span>
-
           <div className="mt-10 flex flex-col gap-3">
             <p className="text-color-primary text-center">Aulas personalizadas</p>
             <p className="text-color-primary text-center">Cronograma criado para você</p>
@@ -54,17 +52,14 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             />
           </div>
         </div>
-      </section>
 
-      <section className="md:-ml-28 mb-10 mt-10 md:mb-0 flex justify-center items-center ">
-        <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative ">
+        <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative">
           <h1 className="text-color-primary font-extrabold text-2xl">
             R$ 10,90<span className="font-light text-sm">/Sem</span>
           </h1>
           <span className="text-color-secondary font-extrabold text-3xl">
             Weekly Plan
           </span>
-
           <div className="mt-10 flex flex-col gap-3">
             <p className="text-color-primary text-center">Aulas personalizadas</p>
             <p className="text-color-primary text-center">Cronograma criado para você</p>
@@ -72,7 +67,6 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             <p className="text-color-primary text-center">Suporte online para dúvidas</p>
             <p className="text-color-primary text-center">Válido por 7 dias.</p>
           </div>
-
           <div className="absolute bottom-4 w-8/12">
             <Button
               onClick={() => handlePlanSelect("10.90")}
@@ -81,13 +75,10 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             />
           </div>
         </div>
-      </section>
-
-      <section className="md:-ml-28 mb-10 mt-10 md:mb-0 flex justify-center items-center">
         <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative">
-          <span className="absolute top-0 left-0 bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-tr-md">
-            20% OFF
-          </span>
+        <span className="absolute top-0 left-0 bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-tr-md ml-2">
+              20% OFF
+            </span>
           <h2 className="text-color-primary font-extrabold text-2xl line-through">
             R$ 29,90
           </h2>
@@ -97,7 +88,6 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
           <span className="text-color-secondary font-extrabold text-3xl">
             Monthly Plan
           </span>
-
           <div className="mt-10 flex flex-col gap-3">
             <p className="text-color-primary text-center">Aulas personalizadas</p>
             <p className="text-color-primary text-center">Cronograma criado para você</p>
@@ -105,7 +95,6 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             <p className="text-color-primary text-center">Suporte online para dúvidas</p>
             <p className="text-color-primary text-center">Válido por 30 dias.</p>
           </div>
-
           <div className="absolute bottom-4 w-8/12">
             <Button
               onClick={() => handlePlanSelect("23.92")}

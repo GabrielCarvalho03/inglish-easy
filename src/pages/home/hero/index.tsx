@@ -19,12 +19,12 @@ export const Hero: React.FC<HeroProps> = ({ more }) => {
   return (
     <main className="w-full overflow-x-hidden">
       <div className="w-full absolute top-2 z-50   ">
-        <Menu className="px-2" title="Entrar">
-          <div className="w-full flex gap-4 md:gap-10">
-            <h1 className="text-xs md:text-base font-medium cursor-pointer"
-            >
+        <Menu className="px-1" title="Entrar">
+          <div className="w-full flex gap-2 md:gap-4">
+            <h1 className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
               È possivel ?
             </h1>
+
             <h1 className=" text-xs   md:text-base font-medium cursor-pointer"
 
             >
@@ -46,12 +46,13 @@ export const Hero: React.FC<HeroProps> = ({ more }) => {
           <section className="w-full flex flex-col md:flex-row items-center relative overflow-hidden">
             <BackgroundImageHome bgImage={BackgroundHero}>
               <div className="w-full flex justify-center items-center  lg:-ml-28 mt-14">
-                <h1 className="font-alexandria text-3xl text-white">Language AI</h1>
+                <h1 className="w-7/12  font-alexandria text-2xl text-white">Language AI</h1>
               </div>
               <section className="w-8/12 md:w-9/12 h-full   flex flex-col justify-center items-center lg:justify-start lg:items-start  lg:mt-24 -mt-10 ml-32  md:ml-0 lg:ml-16 gap-5">
-                <h1 className="text-white md:text-2xl ">
-                  Bem vindo ao Language AI {" "}
+                <h1 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl ml-4  lg:ml-0">
+                  Bem vindo ao Language AI
                 </h1>
+
                 <h1 className="text-white text-2xl md:text-3xl font-bold w-8/12  text-center lg:text-left  lg:w-9/12  ">
                   Ensinando linguagem atraves da inteligencia artifical{" "}
                 </h1>
@@ -68,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ more }) => {
                 </div>
               </section>
             </BackgroundImageHome>
-
+            
             <div className="md:-ml-28  mb-10 md:mb-0 flex items-center ">
               <div className="w-[236px] z-30 h-[360px] shadow-menu rounded-md bg-white flex flex-col justify-center items-center gap-5">
                 <BrainIA />
