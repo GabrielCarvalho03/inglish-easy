@@ -28,8 +28,8 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
         </div>
       </BackgroundImageHome>
 
-      <section className="flex flex-row space-x-5 mt-[170px]">
-        <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative ">
+      <section className="flex flex-col items-center lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:space-x-5 mt-[170px]">
+        <div className="w-[281.35px] h-[339.05px] z-30 shadow-menu rounded-md bg-white flex flex-col items-center relative">
           <h1 className="text-color-primary font-extrabold text-2xl">
             R$ 4,99<span className="font-light text-sm">/Dia</span>
           </h1>
@@ -43,7 +43,6 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             <p className="text-color-primary text-center">Suporte online para dúvidas</p>
             <p className="text-color-primary text-center">Válido por 24 horas.</p>
           </div>
-
           <div className="absolute bottom-4 w-8/12">
             <Button
               onClick={() => handlePlanSelect("4.99")}
@@ -53,7 +52,7 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
           </div>
         </div>
 
-        <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative">
+        <div className="w-[281.35px] h-[339.05px] z-30 shadow-menu rounded-md bg-white flex flex-col items-center relative">
           <h1 className="text-color-primary font-extrabold text-2xl">
             R$ 10,90<span className="font-light text-sm">/Sem</span>
           </h1>
@@ -75,10 +74,11 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
             />
           </div>
         </div>
-        <div className="w-[281.35px] h-[339.05px] z-30 -ml-52 shadow-menu rounded-md bg-white flex flex-col items-center relative">
-        <span className="absolute top-0 left-0 bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-tr-md ml-2">
-              20% OFF
-            </span>
+
+        <div className="w-[281.35px] h-[339.05px] z-30 shadow-menu rounded-md bg-white flex flex-col items-center relative">
+          <span className="absolute top-0 left-0 bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-tr-md ml-2">
+            20% OFF
+          </span>
           <h2 className="text-color-primary font-extrabold text-2xl line-through">
             R$ 29,90
           </h2>
@@ -104,6 +104,8 @@ export const Plans = forwardRef<HTMLDivElement, {}>((_,) => {
           </div>
         </div>
       </section>
+
+
     </main>
   );
 });
