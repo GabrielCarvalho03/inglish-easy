@@ -14,7 +14,17 @@ interface InputCustomProps {
 
 export const InputCustom = forwardRef<HTMLInputElement, InputCustomProps>(
   (
-    { label, mask, value, onChange, onBlur, className, placeholder, type = "text", ...props },
+    {
+      label,
+      mask,
+      value,
+      onChange,
+      onBlur,
+      className,
+      placeholder,
+      type = "text",
+      ...props
+    },
     ref
   ) => {
     console.log("InputCustom value:", value);
@@ -42,7 +52,8 @@ export const InputCustom = forwardRef<HTMLInputElement, InputCustomProps>(
               onBlur={onBlur}
               {...props}
             >
-              {//@ts-ignore
+              {
+                //@ts-ignore
                 (inputMaskProps) => (
                   <input
                     ref={ref}
@@ -54,7 +65,8 @@ export const InputCustom = forwardRef<HTMLInputElement, InputCustomProps>(
                     onChange={onChange}
                     onBlur={onBlur}
                   />
-                )}
+                )
+              }
             </InputMask>
           </div>
         )}

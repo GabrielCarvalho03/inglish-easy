@@ -14,7 +14,7 @@ export const Menu = ({ title, children, className }: MenuProps) => {
       >
         {children}
 
-        <div className="w-4/12 flex justify-end ">
+        <div className="w-4/12 flex justify-end pr-2 ">
           <Button
             className="bg-gradient-to-r from-color-primary to-color-secondary text-white"
             title={title}

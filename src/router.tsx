@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Payment } from "./pages/payment";
 import { More } from "./pages/more/index";
+import { Register } from "./pages/Register";
+import { RegisterSuccess } from "./pages/Register/success";
 
 export const Route = createBrowserRouter([
   {
@@ -10,4 +12,6 @@ export const Route = createBrowserRouter([
   },
   { path: "/payment", element: <Payment /> },
   { path: "/more", element: <More /> },
+  { path: "/register", element: <Register /> },
+  { path: "/register/success", element: <RegisterSuccess /> },
 ]);
