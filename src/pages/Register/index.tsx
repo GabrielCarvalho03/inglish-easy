@@ -53,7 +53,7 @@ export const Register = () => {
           </BackgroundImage>
         </div>
 
-        <section className="w-full mb-10 md:mt-20">
+        <section className="w-full mb-10 -mt-24 sm:mt-10 md:mt-20">
           <form
             onSubmit={handleSubmit((data) =>
               handleRegisterUser(data, navigate)
