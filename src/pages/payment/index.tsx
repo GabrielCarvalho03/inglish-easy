@@ -14,12 +14,6 @@ import { useState, useEffect } from "react";
 import { usePayment } from "@/hooks/usePayment";
 
 
-const mockUsers = [
-  { phone: "(11) 99999-9999", name: "João Silva", plan: "Plano Básico", email: "joao@example.com" },
-  { phone: "(11) 98888-8888", name: "Maria Oliveira", plan: "Plano Premium", email: "maria@example.com" },
-];
-
-const fetchUserByPhone = (phone: string) => mockUsers.find(user => user.phone === phone) || null;
 
 export const Payment = () => { 
   const { setCheckoutData, buildCheckoutData, handlePaymentUser, handleGetUser } = usePayment();
@@ -31,6 +25,8 @@ export const Payment = () => {
     reValidateMode: "onChange",
     resolver: zodResolver(schemaPayment),
   });
+
+  console.log(selectedPlan)
 
   const location = useLocation();
   const { selectedPrice } = location.state || { selectedPrice: "" };

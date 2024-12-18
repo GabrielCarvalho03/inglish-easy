@@ -49,7 +49,7 @@ export const usePayment = create<{
         failure: "http://www.exemplo.com/failure",
         pending: "http://www.exemplo.com/pending",
       },
-      notification_url: "http://www.exemplo.com/notification",
+      notification_url: "http://localhost:3000/course/webkook",
     };
   },
 
